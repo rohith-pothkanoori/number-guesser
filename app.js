@@ -25,7 +25,7 @@ guessbtn.addEventListener("click", guessNum);
 function guessNum(e) {
   let val = parseInt(guessinput.value);
 
-  if (val < min || val > max) {
+  if (val < min || val > max || isNaN(val)) {
     textMessage(`please enter value between ${min} and ${max}`, "red");
   } else {
     guessleft -= 1;
